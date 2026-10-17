@@ -13,6 +13,7 @@ const categoriasEjemplo = [
   Categoria(nombre: 'Otros', icono: Icons.auto_awesome, color: Color(0xFFF1E6FF)),
 ];
 
+// Las imágenes son de ejemplo: cámbialas por las fotos de cada emprendimiento.
 const emprendimientosEjemplo = [
   Emprendimiento(
     nombre: 'Dulces de la Abuela',
@@ -20,6 +21,7 @@ const emprendimientosEjemplo = [
     zona: 'Centro Histórico',
     calificacion: 4.8,
     disponibilidad: true,
+    imagenPrincipal: 'https://picsum.photos/seed/dulces/600/360',
   ),
   Emprendimiento(
     nombre: 'Pan de Casa',
@@ -27,5 +29,14 @@ const emprendimientosEjemplo = [
     zona: 'Centro Histórico',
     calificacion: 4.6,
     disponibilidad: true,
+    imagenPrincipal: 'https://picsum.photos/seed/pan/600/360',
+  ),
+  Emprendimiento(
+    nombre: 'Artesanías Lupita',
+    categoria: 'Artesanías',
+    zona: 'Centro',
+    calificacion: 4.5,
+    disponibilidad: false,
+    imagenPrincipal: 'https://picsum.photos/seed/artesanias/600/360',
   ),
 ];

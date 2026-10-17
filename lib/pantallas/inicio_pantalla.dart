@@ -7,8 +7,15 @@ import '../widgets/encabezado_inicio.dart';
 import '../widgets/seccion_titulo.dart';
 import '../widgets/tarjeta_destacado.dart';
 
-class InicioPantalla extends StatelessWidget {
+class InicioPantalla extends StatefulWidget {
   const InicioPantalla({super.key});
+
+  @override
+  State<InicioPantalla> createState() => _InicioPantallaState();
+}
+
+class _InicioPantallaState extends State<InicioPantalla> {
+  int _pestana = 0;
 
   @override
   Widget build(BuildContext context) {
@@ -35,7 +42,8 @@ class InicioPantalla extends StatelessWidget {
         ],
       ),
       bottomNavigationBar: NavigationBar(
-        selectedIndex: 0,
+        selectedIndex: _pestana,
+        onDestinationSelected: (i) => setState(() => _pestana = i),
         backgroundColor: Colors.white,
         indicatorColor: Colors.transparent,
         destinations: const [
@@ -46,9 +54,14 @@ class InicioPantalla extends StatelessWidget {
           ),
           NavigationDestination(
             icon: Icon(Icons.grid_view_outlined),
+            selectedIcon: Icon(Icons.grid_view, color: kNaranja),
             label: 'Categorías',
           ),
-          NavigationDestination(icon: Icon(Icons.search), label: 'Buscar'),
+          NavigationDestination(
+            icon: Icon(Icons.search),
+            selectedIcon: Icon(Icons.search, color: kNaranja),
+            label: 'Buscar',
+          ),
         ],
       ),
     );

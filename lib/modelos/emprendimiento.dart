@@ -4,7 +4,6 @@ class Emprendimiento {
   final String zona;
   final double calificacion;
   final bool disponibilidad;
-  final String? imagenPrincipal;
 
   const Emprendimiento({
     required this.nombre,
@@ -12,6 +11,5 @@ class Emprendimiento {
     required this.zona,
     required this.calificacion,
     required this.disponibilidad,
-    this.imagenPrincipal,
   });
 }
